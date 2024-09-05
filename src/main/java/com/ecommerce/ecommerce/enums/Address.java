@@ -1,6 +1,4 @@
 package com.ecommerce.ecommerce.enums;
 
-public enum UserRole {
-
-    ADMIN, USER
+public enum Address {
 }
