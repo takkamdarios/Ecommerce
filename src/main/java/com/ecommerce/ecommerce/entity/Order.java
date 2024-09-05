@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
+
+import com.ecommerce.ecommerce.entity.OrderItem;
 
 @Data
 @Entity
@@ -18,7 +21,7 @@ public class Order {
     private BigDecimal totalPrice;
 
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<OderItem> orderItemList;
+    private List<OrderItem> orderItemList;
 
     @Column(name = "created_at")
     private final LocalDateTime createdAt = LocalDateTime.now();
